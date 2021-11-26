@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block content %}
+    <div class="features">
+         <h1>Страница про Python</h1>
+         <p>Python — это высокоуровневый язык программирования общего назначения, который используется в том числе
+             и для разработки веб-приложений. Язык ориентирован на повышение производительности разработчика и
+             читаемости кода.</p>
+         <a href="{% url 'home' %}"><button class="btn btn-warning">На главную страницу</button></a>
+     </div>
+{% endblock %}
