@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Обучение{% endblock %}
+
+{% block content %}
+{% load static %}
+    <div class="features">
+        <h1><u>Обучение программированию</u></h1>
+        <h4>
+            С чего начать? Какой язык программирования выбрать?<br>
+                Давай немного познакомимся с двумя языками - это <em><u>Python</u></em> и <em><u>Java</u></em>.
+        </h4>
+    </div>
+    <div class="py alert-python">
+        <img class="python" src="{% static 'main/img/python/python_1.png' %}" alt="python">
+
+        <p> <u>Python</u> — это высокоуровневый язык программирования
+            общего назначения, который используется в том числе
+            и для разработки веб-приложений. Язык ориентирован
+            на повышение производительности разработчика и
+             читаемости кода.</p>
+        <a href="{% url 'home' %}"><button class="btn btn-info">Читать всё</button></a>
+    </div>
+
+    <div class="features">
+        <a href="{% url 'home' %}"><button class="btn btn-warning">На главную страницу</button></a>
+    </div>
+{% endblock %}

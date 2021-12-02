@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+{% load static %}
+    <div class="cont alert-contacts">
+        <h1>Контакты</h1>
+        <ul>
+            <li><p><i class="fas fa-mobile-alt fa-2x"> +375 (33) 333-30-93></i></p></li>
+            <li><p><i class="fas fa-envelope-open-text fa-2x"> it@overone.by></i></p></li>
+        </ul>
+    </div>
+
+    <div class="cont alert-networks">
+        <ul>
+            <li><a href="https://www.facebook.com/overoneit"><button class="fab fa-facebook-f fa-3x"></button></a></li>
+            <li><a href="https://vk.com/it_overone"><button class="fab fa-vk fa-3x"></button></a></li>
+            <li><a href="https://www.youtube.com/channel/UCDzlJ_j21iyE1ulhuKFvOfQ"><button class="fab fa-youtube fa-3x"></button></a></li>
+            <li><a href="https://www.instagram.com/it_overone/"><button class="fab fa-instagram fa-3x"></button></a></li>
+            <li><a href="https://t.me/joinchat/FEkowUFNrPswMGYy"><button class="fab fa-telegram fa-3x"></button></a></li>
+
+        </ul>
+    </div>
+    <div class="features">
+        <a href="{% url 'home' %}"><button class="btn btn-warning">На главную страницу</button></a>
+    </div>
+{% endblock %}

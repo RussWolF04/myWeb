@@ -1,0 +1,42 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Обучение{% endblock %}
+
+{% block content %}
+{% load static %}
+    <div class="features">
+        <h1><u>Обучение программированию</u></h1>
+        <h4>
+            С чего начать? Какой язык программирования выбрать?<br>
+            Давай немного познакомимся с двумя языками - это <em><u>Python</u></em> и <em><u>Java</u></em>.
+        </h4>
+    </div>
+
+    {% for el in training %}
+        {% if el.id == 2 %}
+
+            <div class="python alert-python">
+                <img class="python" src="{% static 'main/img/python/python.png' %}" alt="python">
+                <h3>{{ el.language }}</h3>
+                <p>{{ el.intro }}</p>
+                <a href="{% url 'training-detail' el.id %}"><button class="btn btn-success">Читать всё</button></a>
+            </div>
+
+        {% endif%}
+
+        {% if el.id == 3 %}
+
+            <div class="java alert-java">
+                <img class="java" src="{% static 'main/img/java/java.png' %}" alt="java">
+                <h3>{{ el.language }}</h3>
+                <p>{{ el.intro }}</p>
+                <a href="{% url 'training-detail' el.id %}"><button class="btn btn-danger">Читать всё</button></a>
+            </div>
+
+        {% endif%}
+    {% endfor %}
+    <div class="features">
+        <a href="{% url 'home' %}"><button class="btn btn-warning">На главную страницу</button></a>
+        <a href="{% url 'update' %}"><button class="btn btn-info">Добавить язык</button></a>
+    </div>
+{% endblock %}
