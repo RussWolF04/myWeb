@@ -1,10 +1,10 @@
 body {
-    background: #0000CD;
+    background: #6959CD;
 }
 
 aside {
     float: left;
-    background: #00008B;
+    background: #473C8B;
     width: 21.5%;
     padding: 2.5%;
     height: 100vh;
@@ -13,6 +13,7 @@ aside {
 }
 
 aside img {
+    border-radius: 50%;
     width: 80px;
     float: left;
 }
@@ -46,7 +47,7 @@ aside ul li:hover, aside ul a:hover {
 main .features {
     float: left;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
     width: 75%;
 }
@@ -62,8 +63,137 @@ main .features p {max-width: 400px; margin: 10px auto}
     text-align: center;
 }
 
+.alert-registr {
+
+    color: #fff;
+    width: 700px;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.alert-registr h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
 form {
-    margin-left: 26%;
-    width: 500px;
-    margin-top: 25px;
+    margin-left: 20%;
+    width: 700px;
+    margin-top: 10px;
+}
+
+.alert-contacts h1 {
+    float: center;
+    color: #fff;
+    text-align: center;
+}
+
+.alert-contacts ul li {
+    text-align: center;
+    text-decoration: none;
+    color: #AFEEEE;
+    margin-top: 13px;
+    display: block;
+}
+
+.alert-networks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #6959CD;
+}
+
+.alert-networks li {
+    float: left;
+    padding: 50px;
+}
+
+.alert-networks li a {
+    display: inline;
+    text-align: center;
+    padding: 18px 25px;
+}
+
+.alert-networks li a:hover {
+    background-color: #473C8B;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+.fab {
+    background: none;
+    border: none;
+}
+
+.features h4 {
+    color: #FFE4E1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alert-python, .alert-java {
+    float: left;
+    width: 37%;
+    padding: 2.5%;
+    height: 50vh;
+    color: #fff;
+}
+
+.alert-python img, .alert-java img {
+    width: 110px;
+    float: left;
+}
+
+.alert-python p, .alert-java p {
+    color: #fff;
+    margin-left: 20%;
+    position: relative;
+    text-align: left;
+}
+
+.python a, .alert-java a {
+    display: inline;
+    float: left;
+    margin: 10px;
+    position: relative;
+    bottom: -10px;
+    left: 100px;
+}
+
+.detail h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.detail img {
+    float: left;
+    margin-top: 20px;
+    margin-left: 5%;
+
+}
+
+.alert-detail p {
+    color: #fff;
+    margin: 30px;
+    margin-left: 25%;
+
+}
+
+.detail a {
+    color: #fff;
+    position: relative;
+    margin-bottom: 0%
+    border-radius: 4px;
+    border: 1px solid #f6705a;
+    padding: 5px 20px;
+
+    display: inline;
+    float: left;
+    margin: 10px;
+    position: relative;
+    bottom: -20px;
+    left: 350px;
 }

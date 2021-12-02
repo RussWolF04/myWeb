@@ -2,11 +2,16 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+{% load static %}
 {% block content %}
      <div class="features">
          <h1>{{ title }}</h1>
-         <p>Научим программировать! Начни зарабатывать 3500 в IT уже через 6 месяцев вместе с нами!</p>
-         <a href="{% url 'python' %}"><button class="btn btn-warning">На страницу про Python</button></a>
-     </div>
+         <h3><ins>Курсы программирования в Минске!</ins></h3>
+         <h5>Научим программировать! Начни зарабатывать 3500 в IT уже через 6 месяцев вместе с нами!</h5>
+         <img src="{% static 'main/img/index/head.png' %}" alt="head">
 
+     </div>
+    <div class="features">
+        <a href="{% url 'training_home' %}"><button class="btn btn-warning">Про Обучение</button></a>
+    </div>
 {% endblock %}

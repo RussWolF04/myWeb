@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% load static %}
+{% block content %}
+    <div class="user alert-registr">
+        <h2>Регистрация пользователя</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-danger" type="submit"><i class="fas fa-user-plus">Регистрация</i></button>
+        </form>
+    </div>
+{% endblock %}

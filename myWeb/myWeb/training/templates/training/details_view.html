@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ training.language }}{% endblock %}
+
+{% block content %}
+{% load static %}
+    <div class="detail alert-detail">
+
+        <h1><u>{{ training.language }}</u></h1>
+        {% if training.id == 2 %}
+            <img class="detail" src="{% static 'main/img/python/python_long.png' %}" alt="python">
+        {% else %}
+            <img class="java" src="{% static 'main/img/java/java.png' %}" alt="java">
+        {% endif%}
+
+        <p>{{ training.article }}</p>
+        <a href="{% url 'training_home' %}" class="btn btn-warning">Назад</a>
+        <a href="{% url 'training-upgrade' training.id %}" class="btn btn-info">Редактировать</a>
+
+    </div>
+{% endblock %}

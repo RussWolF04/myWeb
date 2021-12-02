@@ -13,17 +13,27 @@
 </head>
 <body>
     <aside>
-        <img src="{% static 'main/img/it_overone.png' %}" alt="Лого">
+        <img src="{% static 'main/img/logo/it_overone.png' %}" alt="Лого">
         <span class="logo">IT_OverOne</span>
         <h3>Навигация</h3>
         <ul>
-            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Главная</li></a>
-            <a href="{% url 'python' %}"><li><i class="fab fa-python"></i>Python</li></a>
-            <a href="{% url 'news_home' %}"><li><i class="far fa-newspaper"></i>Новости</li></a>
-            <a href=""><li><i class="fas fa-paper-plane"></i>Контакты</li></a>
-            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить</li></button></a>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home fa-2x"></i>Главная</li></a>
+            <a href="{% url 'training_home' %}"><li><i class="fas fa-laptop-code fa-2x"></i>Обучение</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="far fa-newspaper fa-2x"></i>Новости</li></a>
+            <a href="{% url 'contacts' %}"><li><i class="fas fa-paper-plane fa-2x"></i>Контакты</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить</button></li></a>
 
         </ul>
+
+        {% if user.is_authenticated %}
+            <p>{{ user.username }}!</p>
+            <p><a href="{% url 'logout' %}"><button class="btn btn-secondary"><i class="fas fa-sign-out-alt">Выйти</i></button></a></p>
+        {% else %}
+            <p>Вы не вошли на сайт.</p>
+            <a href="{% url 'login' %}"><button class="btn btn-primary"><i class="fas fa-sign-in-alt">Войти</i></button></a>
+            <a href="{% url 'signup' %}"><button class="btn btn-danger" type="submit"><i class="fas fa-user-plus">Регистрация</i></button></a>
+        {% endif %}
+
     </aside>
     <main>
         {% block content %}
